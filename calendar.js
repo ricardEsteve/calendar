@@ -119,22 +119,4 @@ function update() {
   printDays();
 }
 
-function findAdate() {
-  myYear = document.search.searchMonth.value;
-  monthList = document.search.searchMonth;
-  options = monthList.options;
-  num = monthList.selectedIndex;
-  myMonth = options[num].value;
 
-  if (isNaN(myYear) || myYear < 1) {
-    alert("invalid year");
-  } else {
-    myDate = new Date();
-    myDate.setMonth(myMonth);
-    myDate.setFullYear(myYear);
-    monthCal = myDate.getMonth();
-    yearCal = myDate.getFullYear();
-    header();
-    printDays();
-  }
-}
